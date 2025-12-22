@@ -8,10 +8,10 @@ import Link from "next/link"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack online shopping experience with payment integration",
-    image: "/modern-ecommerce-website.png",
-    liveUrl: "#",
+    title: "Astromobile",
+    description: "Astromobile offers secure mobile shopping with seamless checkout and real-time orders.",
+    image: "/Screenshot 2025-12-22 165827.png",
+    liveUrl: "https://www.astromobile.io/",
   },
   // {
   //   title: "SaaS Dashboard",
@@ -20,16 +20,16 @@ const projects = [
   //   liveUrl: "#",
   // },
   {
-    title: "Portfolio Website",
+    title: "Multimart Online Shop",
     description: "Creative portfolio showcase with smooth animations",
-    image: "/portfolio-website-creative.jpg",
-    liveUrl: "#",
+    image: "/modern-ecommerce-website.png",
+    liveUrl: "https://mutlimart-online-shop.co.zw",
   },
   {
-    title: "Booking System",
-    description: "Real-time appointment scheduling platform",
-    image: "/booking-system-calendar.png",
-    liveUrl: "#",
+    title: "Kanda Solar",
+    description: "Power Your Future With Reliable Solar Energy",
+    image: "/kandasolarbanner.png",
+    liveUrl: "https://kandasolar.co.zw",
   },
   // {
   //   title: "Social Network",
