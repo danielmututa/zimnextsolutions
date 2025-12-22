@@ -3,16 +3,16 @@ import { Star } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    company: "TechStart Inc.",
-    role: "CEO",
+    name: "Emmanuel Mhako",
+    company: "Kanda Solar",
+    role: "Installer",
     content:
-      "TechDev transformed our web presence completely. Their attention to detail and technical expertise is unmatched. Our conversion rate increased by 150%!",
+      "Zimnext Solutions transformed our web presence completely. Their attention to detail and technical expertise is unmatched. Our conversion rate increased by 150%!",
     rating: 5,
-    image: "/professional-woman-portrait.png",
+    image: "/kandasolarCEO.jpg",
   },
   {
-    name: "Michael Chen",
+    name: "Charls Lungu",
     company: "MobileFirst Solutions",
     role: "Product Manager",
     content:
@@ -21,13 +21,13 @@ const testimonials = [
     image: "/professional-man-portrait.png",
   },
   {
-    name: "Emily Rodriguez",
-    company: "GrowthLabs",
+    name: "Prince Pedzisai",
+    company: "NeonSpark",
     role: "Marketing Director",
     content:
-      "Their digital marketing strategies helped us triple our online reach in just 6 months. The team is responsive, creative, and results-driven.",
+      "Their digital marketing strategies helped us triple our online reach in just a month. The team is responsive, creative and results-driven.",
     rating: 5,
-    image: "/professional-woman-marketing-portrait.png",
+    image: "/prince.jpg",
   },
 ]
 

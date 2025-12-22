@@ -11,9 +11,9 @@ export default function Home() {
 
 const partner = [
   {img:"/Black_White_Mini.png"},
-  {img:"/Black_White_Mini.png"},
-  {img:"/Black_White_Mini.png"},
-  {img:"/Black_White_Mini.png"},
+  {img:"/Ominiview.png"},
+  {img:"/neonspark.png"},
+  {img:"/Eight Tech - blue-B9VBXCZ7.png"},
 ]
 
   return (
@@ -42,7 +42,7 @@ const partner = [
 
                 <div className="text-xl font-bold text-muted-foreground">
                  
-                  <img src= {partner.img} className="object-cover w-35" alt="" />
+                  <img src= {partner.img} className="object-contain h-18 w-35" alt="" />
                   
                   </div>
               </div>
