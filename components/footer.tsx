@@ -2,7 +2,23 @@
 
 import Link from "next/link"
 
+import { Linkedin, Instagram, Facebook } from "lucide-react"
 export default function Footer() {
+
+
+
+  const teamMembers = [
+    {
+      
+      Instagram: "https://www.instagram.com/zimnext_solutions/",
+      linkedin: "https://www.linkedin.com/company/zimnextsolutions",
+      facebook: "https://www.facebook.com/profile.php?id=61576359646287",
+    },
+    
+    
+  ]
+
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,6 +37,38 @@ export default function Footer() {
             <p className="text-slate-400 text-sm">
               Transforming ideas into digital reality with cutting-edge technology solutions.
             </p>
+
+             {teamMembers.map((member, index) => (
+                        <div
+                          key={index}
+                          className=""
+                        >
+                          
+                          
+                            
+                            <div className="flex gap-2 pt-4  items-center  gap-3">
+                              <a
+                                href={member.linkedin}
+                                className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
+                              >
+                                <Linkedin className="h-5 w-5" />
+                              </a>
+                              <a
+                                href={member.Instagram}
+                                className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
+                              >
+                                <Instagram className="h-5 w-5" />
+                              </a>
+                              <a
+                                href={member.facebook}
+                                className="p-2 rounded-full bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors"
+                              >
+                                <Facebook className="h-5 w-5" />
+                              </a>
+                          
+                          </div>
+                        </div>
+                      ))}
           </div>
 
           <div>
