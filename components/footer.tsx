@@ -58,7 +58,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/mobile-development" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/mobile-apps" className="text-slate-400 hover:text-white transition-colors">
                   Mobile Development
                 </Link>
               </li>
@@ -73,7 +73,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/digital-marketing" className="text-slate-400 hover:text-white transition-colors">
+                <Link href="/marketing" className="text-slate-400 hover:text-white transition-colors">
                   Digital Marketing
                 </Link>
               </li>
