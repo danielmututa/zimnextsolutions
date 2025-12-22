@@ -1,5 +1,7 @@
 "use client"
 
+// re_Tt2GFhbK_8BCyAYyrZaGCzUvw7CVwbCXz
+
 import type React from "react"
 
 import { useState } from "react"
@@ -28,16 +30,45 @@ export default function ContactPage() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!selectedService) {
-      alert("Please select a service you're interested in")
-      return
-    }
-    alert(`Thank you for your inquiry about ${selectedService}! We'll get back to you soon.`)
-    setFormData({ name: "", email: "", message: "" })
-    setSelectedService("")
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  
+  if (!selectedService) {
+    alert("Please select a service you're interested in")
+    return
   }
+
+  console.log('🚀 Submitting form...') // You should see this
+
+  try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        service: selectedService,
+      }),
+    })
+
+    console.log('📡 Response:', response.status) // You should see this
+
+    const result = await response.json()
+    console.log('📦 Result:', result) // You should see this
+
+    if (response.ok) {
+      alert(`✅ Thank you! We received your inquiry about ${selectedService}`)
+      setFormData({ name: "", email: "", message: "" })
+      setSelectedService("")
+    } else {
+      alert('❌ Something went wrong: ' + JSON.stringify(result))
+    }
+  } catch (error) {
+    console.error('💥 Error:', error) // You should see this if it fails
+    alert('Failed to send message. Please try again.')
+  }
+}
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
