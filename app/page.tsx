@@ -3,6 +3,7 @@ import Hero from "@/components/hero"
 import Services from "@/components/services"
 import ServicesCarousel from "@/components/services-carousel"
 import Testimonials from "@/components/testimonials"
+import PricingCard from "@/components/packaging"
 import Team from "@/components/team"
 import Footer from "@/components/footer"
 
@@ -36,7 +37,7 @@ const partner = [
               <div
               
               key={i}
-              className="flex items-center justify-center p-6 bg-muted rounded-xl hover:bg-muted/70 transition-colors"
+              className="flex items-center justify-center p-6 bg-blue-50 rounded-xl hover:bg-muted/70 transition-colors"
               >
 
 
@@ -50,6 +51,8 @@ const partner = [
           </div>
         </div>
       </section>
+
+      <PricingCard />
       <Team />
           <Testimonials />
       <Footer />

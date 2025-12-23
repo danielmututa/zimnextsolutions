@@ -94,6 +94,11 @@ export default function Footer() {
                   Partners
                 </Link>
               </li>
+              <li>
+                <Link href="/pricing" className="text-slate-400 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </li>
             </ul>
           </div>
 
