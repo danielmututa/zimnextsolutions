@@ -15,7 +15,7 @@ const services = [
     icon: Smartphone,
     title: "Mobile Development",
     description: "Native and cross-platform mobile applications that deliver seamless experiences on all devices.",
-    href: "/mobile-development",
+    href: "/mobile-apps",
   },
   {
     icon: Apple,
@@ -34,13 +34,13 @@ const services = [
     title: "Digital Marketing",
     description:
       "Comprehensive digital marketing strategies including SEO, content marketing, and social media management.",
-    href: "/digital-marketing",
+    href: "/marketing",
   },
   {
     icon: Monitor,
     title: "UI/UX Design",
     description: "Beautiful, intuitive user interfaces and experiences that delight users and drive engagement.",
-    href: "/uiux-design",
+    href: "/ui-ux",
   },
 ]
 

@@ -162,7 +162,7 @@ export default function Navbar() {
               Web Development
             </Link>
             <Link
-              href="/mobile-development"
+              href="/mobile-apps"
               className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -183,14 +183,14 @@ export default function Navbar() {
               Android Development
             </Link>
             <Link
-              href="/digital-marketing"
+              href="/marketing"
               className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Digital Marketing
             </Link>
             <Link
-              href="/uiux-design"
+              href="/ui-ux"
               className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
