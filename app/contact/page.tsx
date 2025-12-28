@@ -213,7 +213,7 @@ export default function ContactPage() {
 
               <Card className="bg-white/10 backdrop-blur-xl border-white/20 shadow-2xl p-6">
                 <p className="text-sm text-blue-100 leading-relaxed">
-                  🌍 Global Team • 🚀 Fast Response • 💼 Professional Service
+                  Global Team •  Fast Response •  Professional Service
                   <br />
                   <br />
                   We serve clients worldwide. No matter where you are, we're ready to help transform your ideas into
