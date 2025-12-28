@@ -3,7 +3,7 @@ import Hero from "@/components/hero"
 import Services from "@/components/services"
 import ServicesCarousel from "@/components/services-carousel"
 import Testimonials from "@/components/testimonials"
-import PricingCard from "@/components/packaging"
+// import PricingCard from "@/components/packaging"
 import Team from "@/components/team"
 import Footer from "@/components/footer"
 
@@ -52,7 +52,7 @@ const partner = [
         </div>
       </section>
 
-      <PricingCard />
+      {/* <PricingCard /> */}
       <Team />
           <Testimonials />
       <Footer />
