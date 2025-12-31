@@ -27,7 +27,7 @@ export default function Team() {
     {
       name: "Sean Manjengwa",
       role: "Marketing Director",
-      image: "/sean.jpg",
+      image: "/Untitled-5.png",
       linkedin: "https://www.linkedin.com/in/sean-manjengwa-a49807279/",
       facebook: "https://www.facebook.com/profile.php?id=61576359646287",
     },

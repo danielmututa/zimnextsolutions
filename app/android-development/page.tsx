@@ -7,29 +7,19 @@ import { Button } from "@/components/ui/button"
 
 const projects = [
   {
-    title: "Ride Sharing App",
-    description: "Real-time GPS tracking and ride matching platform",
-    image: "/android-ride-sharing-uber.jpg",
+    title: "Prepaid Lockapp",
+    description: "Quick device access with simpe payment options",
+    image: "/Artboard 2.png",
     link: "https://example.com/ride-sharing-app",
   },
-  {
-    title: "News Aggregator",
-    description: "Personalized news feed with offline reading mode",
-    image: "/android-news-app-reader.jpg",
-    link: "https://example.com/news-aggregator",
-  },
+  
   // {
   //   title: "Fitness Tracker",
   //   description: "Workout tracking with Google Fit integration",
   //   image: "/android-fitness-workout-tracker.jpg",
   //   link: "https://example.com/fitness-tracker",
   // },
-  {
-    title: "Recipe App",
-    description: "Cooking guide with step-by-step instructions",
-    image: "/android-recipe-cooking-app.jpg",
-    link: "https://example.com/recipe-app",
-  },
+ 
   // {
   //   title: "Expense Tracker",
   //   description: "Budget management with spending analytics",

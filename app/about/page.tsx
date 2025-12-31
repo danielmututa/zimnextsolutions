@@ -11,15 +11,16 @@ export default function PartnersPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 md:pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background -z-10" />
-        <div className="container mx-auto px-4 lg:px-8">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background z-30" />
+        <img src="/about.jpeg" className="absolute inset-0 w-full h-full -z-20 object-cover" alt="" />
+        <div className="container  mx-auto z-50 px-4 lg:px-8">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <Badge className="w-fit mx-auto">About ZimNext Solutions</Badge>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-balance">
               Pioneering the Future of{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Digital Experiences</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-pretty">
+            <p className="text-lg md:text-xl  leading-relaxed text-pretty text-white">
               We are a visionary technology company pioneering the future of digital experiences through AI, quantum computing, and immersive design.
             </p>
           </div>
@@ -137,11 +138,11 @@ export default function PartnersPage() {
             <Card className="border-2 hover:border-primary transition-colors">
               <CardContent className="pt-6 space-y-4 text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto flex items-center justify-center text-2xl font-bold text-white">
-                  AQ
+                  DM
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Alex Quantum</h3>
-                  <p className="text-sm text-muted-foreground">Chief Technology Officer</p>
+                  <h3 className="font-semibold text-lg">Daniel Mututa</h3>
+                  <p className="text-sm text-muted-foreground">CEO & Lead Developer</p>
                   <p className="text-xs text-muted-foreground mt-1">Quantum Computing & AI</p>
                 </div>
               </CardContent>
@@ -149,10 +150,22 @@ export default function PartnersPage() {
             <Card className="border-2 hover:border-primary transition-colors">
               <CardContent className="pt-6 space-y-4 text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-primary mx-auto flex items-center justify-center text-2xl font-bold text-white">
-                  MH
+                  EM
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Maya Holograph</h3>
+                  <h3 className="font-semibold text-lg">Emmanuel Mututa</h3>
+                  <p className="text-sm text-muted-foreground">CTO & Lead Developer</p>
+                  <p className="text-xs text-muted-foreground mt-1">Quantum Computing & AI</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-2 hover:border-primary transition-colors">
+              <CardContent className="pt-6 space-y-4 text-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-primary mx-auto flex items-center justify-center text-2xl font-bold text-white">
+                  KM
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg">Kelvin Mutukwa</h3>
                   <p className="text-sm text-muted-foreground">Creative Director</p>
                   <p className="text-xs text-muted-foreground mt-1">3D Design & AR/VR</p>
                 </div>
@@ -161,24 +174,12 @@ export default function PartnersPage() {
             <Card className="border-2 hover:border-primary transition-colors">
               <CardContent className="pt-6 space-y-4 text-center">
                 <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-accent mx-auto flex items-center justify-center text-2xl font-bold text-white">
-                  ZN
+                  SM
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg">Zara Neural</h3>
+                  <h3 className="font-semibold text-lg">Sean Manjegwa</h3>
                   <p className="text-sm text-muted-foreground">Digital Marketing Lead</p>
                   <p className="text-xs text-muted-foreground mt-1">Predictive Analytics & Campaigns</p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card className="border-2 hover:border-primary transition-colors">
-              <CardContent className="pt-6 space-y-4 text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent to-primary mx-auto flex items-center justify-center text-2xl font-bold text-white">
-                  KC
-                </div>
-                <div>
-                  <h3 className="font-semibold text-lg">Kai Cyber</h3>
-                  <p className="text-sm text-muted-foreground">Security Architect</p>
-                  <p className="text-xs text-muted-foreground mt-1">Quantum Encryption & Blockchain</p>
                 </div>
               </CardContent>
             </Card>
@@ -197,15 +198,15 @@ export default function PartnersPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center space-y-2">
-              <div className="text-4xl md:text-5xl font-bold">2050</div>
+              <div className="text-4xl md:text-5xl font-bold">2027</div>
               <div className="text-primary-foreground/80">Founded for the Future</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl md:text-5xl font-bold">50+</div>
+              <div className="text-4xl md:text-5xl font-bold">7+</div>
               <div className="text-primary-foreground/80">Projects Completed</div>
             </div>
             <div className="text-center space-y-2">
-              <div className="text-4xl md:text-5xl font-bold">25</div>
+              <div className="text-4xl md:text-5xl font-bold">1+</div>
               <div className="text-primary-foreground/80">Countries Reached</div>
             </div>
             <div className="text-center space-y-2">

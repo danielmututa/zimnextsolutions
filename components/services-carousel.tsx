@@ -16,7 +16,7 @@ const carouselItems = [
     title: "Mobile Development",
     description: "Creating seamless mobile experiences across all platforms",
     image: "/mobile-app-development.png",
-    href: "/mobile-development",
+    href: "/mobile-apps",
   },
   {
     title: "iOS Development",
@@ -34,13 +34,13 @@ const carouselItems = [
     title: "Digital Marketing",
     description: "Data-driven strategies to grow your online presence",
     image: "/digital-marketing-analytics-social-media-seo.png",
-    href: "/digital-marketing",
+    href: "/marketing",
   },
   {
     title: "UI/UX Design",
     description: "Beautiful interfaces that users love to interact with",
     image: "/uiux-design-interface-user-experience.jpg",
-    href: "/uiux-design",
+    href: "/ui-ux",
   },
 ]
 
@@ -94,11 +94,11 @@ export default function ServicesCarousel() {
                 <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
                   <h3 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{item.title}</h3>
                   <p className="text-xl md:text-2xl mb-6 text-blue-100 text-balance max-w-2xl">{item.description}</p>
-                  <Link href={item.href}>
+                  {/* <Link href={item.href}>
                     <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
                       View Projects
                     </Button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             ))}
