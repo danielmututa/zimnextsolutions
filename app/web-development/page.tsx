@@ -23,7 +23,7 @@ const projects = [
     title: "Multimart Online Shop",
     description: "Creative portfolio showcase with smooth animations",
     image: "/modern-ecommerce-website.png",
-    liveUrl: "https://mutlimart-online-shop.co.zw",
+    liveUrl: "https://mmshop.co.zw",
   },
   {
     title: "Kanda Solar",
