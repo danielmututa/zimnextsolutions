@@ -31,12 +31,12 @@ const projects = [
     image: "/kandasolarbanner.png",
     liveUrl: "https://kandasolar.co.zw",
   },
-  // {
-  //   title: "Social Network",
-  //   description: "Community platform with real-time messaging",
-  //   image: "/social-media-platform.png",
-  //   liveUrl: "#",
-  // },
+  {
+     title: "Strategic Builders",
+  description: "Construction company with over 10 years of experience in residential and commercial projects.",
+  image: "/strategic-builders.png",
+  liveUrl: "https://strategic-builders.co.zw",
+  },
 ]
 
 const features = [
