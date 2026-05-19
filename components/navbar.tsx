@@ -34,108 +34,103 @@ export default function Navbar() {
     setCloseTimer(timer)
   }
 
+  const services = [
+    { name: "Web Development", href: "/web-development" },
+    { name: "Mobile Development", href: "/mobile-apps" },
+    { name: "iOS Development", href: "/ios-development" },
+    { name: "Android Development", href: "/android-development" },
+    { name: "Digital Marketing", href: "/marketing" },
+    { name: "UI/UX Design", href: "/ui-ux" },
+  ]
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-white/10 backdrop-blur-xl shadow-2xl border-b border-white/20" : "bg-white/5 backdrop-blur-lg"
+        isScrolled
+          ? "bg-slate-950/70 backdrop-blur-xl border-b border-white/10 py-4 shadow-xl"
+          : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
             className="flex items-center gap-3 text-white font-bold text-xl hover:opacity-90 transition-opacity"
           >
-            <div className="w-35  h-14 relative  backdrop-blur-md border-none flex items-center justify-center shadow-2xl border border-white/30">
-           
-            <img src="/Zimnext solutions.png" className="h-full w-full absolute object-cover" alt="" />
+            <div className="w-36 h-12 relative flex items-center justify-center">
+              <img
+                src="/Zimnext solutions.png"
+                className="h-full w-full object-contain"
+                alt="Zimnext Solutions Logo"
+              />
             </div>
-        
           </Link>
 
-          {/* Desktop Navigation - Cleaner with dropdown */}
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
-            
+            <Link
+              href="/"
+              className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-sm"
+            >
+              Home
+            </Link>
 
-
-
-            <div className="relative group" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button className="text-blue-400 hover:text-blue-300 transition-colors font-medium drop-shadow-lg text-base flex items-center gap-1">
-                Portfolio
-                <ChevronDown className="h-4 w-4" />
+            {/* Services Dropdown */}
+            <div
+              className="relative group"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-sm flex items-center gap-1 cursor-pointer">
+                Services
+                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
               </button>
 
               {isServicesOpen && (
                 <div
-                  className="absolute top-full left-0 mt-2 w-56 bg-blue-600/95 backdrop-blur-xl rounded-xl shadow-2xl border border-blue-400/30 py-2"
+                  className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/10 py-3 px-2 flex flex-col gap-1 transition-all duration-300"
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <Link
-                    href="/web-development"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    Web Development
-                  </Link>
-                  <Link
-                    href="/mobile-apps"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    Mobile Development
-                  </Link>
-                  <Link
-                    href="/ios-development"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    iOS Development
-                  </Link>
-                  <Link
-                    href="/android-development"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    Android Development
-                  </Link>
-                  <Link
-                    href="/marketing"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    Digital Marketing
-                  </Link>
-                  <Link
-                    href="/ui-ux"
-                    className="block px-4 py-2.5 text-white/90 hover:text-white hover:bg-white/10 transition-colors text-sm"
-                  >
-                    UI/UX Design
-                  </Link>
+                  {services.map((service, i) => (
+                    <Link
+                      key={i}
+                      href={service.href}
+                      className="block px-4 py-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors text-sm font-medium"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
                 </div>
               )}
             </div>
 
             <Link
               href="/careers"
-              className="text-blue-400 hover:text-blue-300 transition-colors font-medium drop-shadow-lg text-base"
+              className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-sm"
             >
               Careers
             </Link>
             <Link
               href="/faq"
-              className="text-blue-400 hover:text-blue-300 transition-colors font-medium drop-shadow-lg text-base"
+              className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-sm"
             >
               FAQ
             </Link>
             <Link
               href="/contact"
-              className="px-5 py-2.5 bg-blue-600/80 backdrop-blur-md text-white rounded-full hover:bg-blue-600 transition-all font-medium drop-shadow-lg border border-blue-400/30 text-base"
+              className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all font-semibold shadow-lg shadow-blue-500/20 text-sm"
             >
-              Contact
+              Contact Us
             </Link>
           </div>
 
+          {/* Hamburger Menu Icon */}
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-blue-400 hover:bg-blue-600/20 rounded-full"
+            className="lg:hidden text-slate-300 hover:bg-white/5 rounded-full"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -145,78 +140,53 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/10 backdrop-blur-xl border-t border-white/20">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {/* <Link
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-slate-950/95 backdrop-blur-2xl border-t border-white/10 shadow-2xl py-4 transition-all duration-300">
+          <div className="px-4 space-y-2">
+            <Link
               href="/"
-              className="block w-full text-left px-3 py-2 text-blue-400 hover:bg-white/20 rounded-lg font-medium"
+              className="block w-full px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-xl font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
-            </Link> */}
-            <Link
-              href="/web-development"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Web Development
             </Link>
-            <Link
-              href="/mobile-apps"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Mobile Development
-            </Link>
-            <Link
-              href="/ios-development"
-              className="block w-full text-left px-3 py-2 text-blak hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              iOS Development
-            </Link>
-            <Link
-              href="/android-development"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Android Development
-            </Link>
-            <Link
-              href="/marketing"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Digital Marketing
-            </Link>
-            <Link
-              href="/ui-ux"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              UI/UX Design
-            </Link>
+            <div className="border-t border-white/5 my-2"></div>
+            <p className="px-4 text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">
+              Our Services
+            </p>
+            {services.map((service, i) => (
+              <Link
+                key={i}
+                href={service.href}
+                className="block w-full px-6 py-2 text-slate-300 hover:text-white hover:bg-white/5 rounded-xl font-medium text-sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {service.name}
+              </Link>
+            ))}
+            <div className="border-t border-white/5 my-2"></div>
             <Link
               href="/careers"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
+              className="block w-full px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-xl font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Careers
             </Link>
             <Link
               href="/faq"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
+              className="block w-full px-4 py-2.5 text-slate-300 hover:text-white hover:bg-white/5 rounded-xl font-medium"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               FAQ
             </Link>
-            <Link
-              href="/contact"
-              className="block w-full text-left px-3 py-2 text-black hover:bg-white/20 rounded-lg font-medium"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
+            <div className="pt-2">
+              <Link
+                href="/contact"
+                className="block text-center w-full px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold shadow-lg shadow-blue-500/20 text-sm"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </div>
           </div>
         </div>
       )}
