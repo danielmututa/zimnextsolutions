@@ -46,26 +46,33 @@ export default function InteractivePillars() {
   }, [])
 
   return (
-    <section ref={containerRef} className="py-20 sm:py-32 bg-slate-950 border-t border-b border-white/5 relative overflow-hidden">
+    <section ref={containerRef} className="py-20 sm:py-32 bg-slate-950 border-t border-b border-white/5 relative overflow-visible">
 
-      {/* Starting circle "2" — desktop only */}
+      {/* Circle "2" — desktop only */}
       <div className="hidden sm:flex absolute left-1/2 top-4 w-8 h-8 rounded-full border-2 border-sky-400 bg-slate-950 -translate-x-1/2 items-center justify-center z-10 font-bold text-xs text-sky-400 shadow-md">
         2
       </div>
 
-      {/* Vertical scroll track — desktop only */}
-      <div className="hidden sm:block absolute left-1/2 top-12 bottom-12 w-0.5 -translate-x-1/2 pointer-events-none">
+      {/* Moving line — all screen sizes, z-0 so cards layer on top */}
+      <div className="absolute left-[39px] sm:left-1/2 top-12 bottom-12 w-0.5 -translate-x-1/2 pointer-events-none z-0">
+        {/* Dashed track */}
         <div className="absolute inset-0 border-l-2 border-dashed border-slate-800" />
+
+        {/* Active fill */}
         <div
           className="absolute top-0 left-0 w-full bg-sky-400 transition-all duration-150"
           style={{ height: `${scrollProgress * 100}%` }}
         />
+
+        {/* Moving dot — outer */}
         <div
-          className="absolute left-1/2 w-4 h-4 rounded-full bg-white border-2 border-sky-400 shadow-lg shadow-sky-400/50 -translate-x-1/2 -translate-y-1/2 z-20 transition-all duration-100"
+          className="absolute left-1/2 w-4 h-4 rounded-full bg-white border-2 border-sky-400 shadow-lg shadow-sky-400/50 -translate-x-1/2 -translate-y-1/2 transition-all duration-100"
           style={{ top: `${scrollProgress * 100}%` }}
         />
+
+        {/* Moving dot — inner */}
         <div
-          className="absolute left-1/2 w-2 h-2 rounded-full bg-sky-200 -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-100"
+          className="absolute left-1/2 w-2 h-2 rounded-full bg-sky-200 -translate-x-1/2 -translate-y-1/2 transition-all duration-100"
           style={{ top: `${scrollProgress * 100}%` }}
         />
       </div>
@@ -95,8 +102,8 @@ export default function InteractivePillars() {
           </div>
         </div>
 
-        {/* Right: Pillar cards */}
-        <div className="lg:col-span-7 space-y-4">
+        {/* Right: Pillar cards — pl-14 on mobile clears the line, lg:pl-0 on desktop */}
+        <div className="lg:col-span-7 space-y-4   lg:pl-0 relative z-10">
           {pillars.map((pillar, index) => {
             const PillarIcon = pillar.icon
             const isPassed = scrollProgress >= pillar.threshold
@@ -104,7 +111,7 @@ export default function InteractivePillars() {
             return (
               <div
                 key={index}
-                className={`flex items-start gap-4 p-5 sm:p-8 rounded-2xl border transition-all duration-500 ${
+                className={`flex items-start gap-4 p-5 sm:p-8 rounded-2xl border transition-all duration-500 relative z-10 ${
                   isPassed
                     ? "bg-slate-900 border-sky-500/30 shadow-2xl sm:scale-[1.01]"
                     : "bg-slate-900/40 border-white/5 opacity-60"

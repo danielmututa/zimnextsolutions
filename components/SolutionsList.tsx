@@ -63,13 +63,13 @@ export default function SolutionsList() {
   return (
     <section ref={containerRef} className="py-20 sm:py-32 bg-slate-950/90 relative overflow-visible">
 
-      {/* Starting circle — desktop only */}
-      <div className="hidden sm:flex absolute left-1/2 top-[-16px] w-8 h-8 rounded-full border-2 border-blue-500 bg-slate-950 -translate-x-1/2 items-center justify-center z-30 font-bold text-xs text-blue-400 shadow-lg">
+      {/* Starting circle "1" — all screen sizes */}
+      <div className="flex absolute left-1/2 top-[-16px] w-8 h-8 rounded-full border-2 border-blue-500 bg-slate-950 -translate-x-1/2 items-center justify-center z-30 font-bold text-xs text-blue-400 shadow-lg">
         1
       </div>
 
-      {/* Vertical scroll track — desktop only */}
-      <div className="hidden sm:block absolute left-1/2 top-[16px] bottom-12 w-0.5 -translate-x-1/2 pointer-events-none">
+      {/* Vertical scroll track — all screen sizes, always centered */}
+      <div className="absolute left-1/2 top-[16px] bottom-12 w-0.5 -translate-x-1/2 pointer-events-none z-0">
         {/* Dashed background track */}
         <div className="absolute inset-0 border-l-2 border-dashed border-slate-800" />
 
@@ -94,7 +94,7 @@ export default function SolutionsList() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start relative z-10">
 
         {/* Left: Section intro */}
-        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-36">
+        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-36 mt-16 lg:mt-0">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
             Move your industry <br />
             forward.
