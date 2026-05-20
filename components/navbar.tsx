@@ -58,10 +58,10 @@ export default function Navbar() {
             href="/"
             className="flex items-center gap-3 text-white font-bold text-xl hover:opacity-90 transition-opacity"
           >
-            <div className="w-36 h-12 relative flex items-center justify-center">
+            <div className="w-36 h-16 relative flex items-center justify-center">
               <img
                 src="/Zimnext solutions.png"
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
                 alt="Zimnext Solutions Logo"
               />
             </div>
@@ -112,12 +112,12 @@ export default function Navbar() {
             >
               Careers
             </Link>
-            <Link
+            {/* <Link
               href="/faq"
               className="text-slate-300 hover:text-cyan-400 transition-colors font-medium text-sm"
             >
               FAQ
-            </Link>
+            </Link> */}
             <Link
               href="/contact"
               className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all font-semibold shadow-lg shadow-blue-500/20 text-sm"
