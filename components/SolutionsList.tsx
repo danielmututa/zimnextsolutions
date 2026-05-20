@@ -63,15 +63,15 @@ export default function SolutionsList() {
   }, [])
 
   return (
-    <section ref={containerRef} className="py-32 bg-slate-950/90 relative overflow-hidden">
+    <section ref={containerRef} className="py-32 bg-slate-950/90 relative overflow-visible">
       
-      {/* Big starting circle at the top of the line */}
-      <div className="absolute left-[39px] sm:left-1/2 top-4 w-8 h-8 rounded-full border-2 border-blue-500 bg-slate-950 -translate-x-1/2 flex items-center justify-center z-10 font-bold text-xs text-blue-400 shadow-md">
+      {/* Big starting circle "1" positioned directly touching the bottom of the Hero's logo circle */}
+      <div className="absolute left-[39px] sm:left-1/2 top-[-16px] w-8 h-8 rounded-full border-2 border-blue-500 bg-slate-950 -translate-x-1/2 flex items-center justify-center z-30 font-bold text-xs text-blue-400 shadow-lg">
         1
       </div>
 
-      {/* Inner Track container (Blue theme) */}
-      <div className="absolute left-[39px] sm:left-1/2 top-12 bottom-12 w-0.5 -translate-x-1/2 pointer-events-none">
+      {/* Inner Track container (Blue theme) - starts right below the starting circle "1" */}
+      <div className="absolute left-[39px] sm:left-1/2 top-[16px] bottom-12 w-0.5 -translate-x-1/2 pointer-events-none">
         {/* Dashed line track */}
         <div className="absolute inset-0 border-l-2 border-dashed border-slate-800" />
         
