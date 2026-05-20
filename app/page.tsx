@@ -9,6 +9,7 @@ import ContactFormSection from "@/components/ContactFormSection"
 import Footer from "@/components/footer"
 import ScrollReveal from "@/components/ScrollReveal"
 import CookieConsentFlow from "@/components/CookieConsentFlow"
+import AiVideoSection from "@/components/AiVideoSection"
 
 export default function Home() {
   const partners = [
@@ -40,7 +41,12 @@ export default function Home() {
         <ShowcaseGrid />
       </ScrollReveal>
 
-      {/* 5. Team Timeline Offset Circles */}
+      {/* 5. AI Video Autoplay Section */}
+      <ScrollReveal variant="fade-up" delay={100}>
+        <AiVideoSection />
+      </ScrollReveal>
+
+      {/* 6. Team Timeline Offset Circles */}
       <ScrollReveal variant="fade-up" delay={100}>
         <TeamTimeline />
       </ScrollReveal>
