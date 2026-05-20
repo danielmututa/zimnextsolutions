@@ -129,7 +129,7 @@ export default function ServicesCarousel() {
                   <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-slate-950 via-slate-950/20 to-transparent" />
                   
                   {/* Category Badge Tag */}
-                  <div className="absolute top-6 left-6 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-cyan-400">
+                  <div className="absolute top-6 left-6 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-xs font-semibold text-slate-300">
                     {item.tag}
                   </div>
                 </div>
@@ -160,14 +160,14 @@ export default function ServicesCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-slate-950/60 hover:bg-slate-950 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105 hover:border-cyan-400/50 cursor-pointer z-20"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-slate-950/60 hover:bg-slate-950 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105 hover:border-white/30 cursor-pointer z-20"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-5 w-5" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-slate-950/60 hover:bg-slate-950 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105 hover:border-cyan-400/50 cursor-pointer z-20"
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 bg-slate-950/60 hover:bg-slate-950 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/10 transition-all hover:scale-105 hover:border-white/30 cursor-pointer z-20"
             aria-label="Next slide"
           >
             <ChevronRight className="h-5 w-5" />
@@ -181,7 +181,7 @@ export default function ServicesCarousel() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                index === currentIndex ? "bg-cyan-400 w-8" : "bg-slate-800 w-2.5 hover:bg-slate-700"
+                index === currentIndex ? "bg-blue-600 w-8" : "bg-slate-800 w-2.5 hover:bg-slate-700"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

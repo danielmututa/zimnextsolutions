@@ -61,34 +61,12 @@
   body {
     @apply bg-background text-foreground scroll-smooth antialiased;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.3) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(8, 145, 178, 0.08) 0px, transparent 50%),
-      radial-gradient(at 50% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.2) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(15, 23, 42, 0.3) 0px, transparent 50%);
   }
 }
 
 /* Custom premium styles and micro-animations */
-
-/* Smooth glow hover effects */
-.glow-border {
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.glow-border::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  border-radius: inherit;
-  z-index: -1;
-  opacity: 0.15;
-  transition: opacity 0.3s ease;
-}
-
-.glow-border:hover::after {
-  opacity: 0.8;
-}
 
 /* Typewriter animations */
 @keyframes blink {
@@ -102,7 +80,7 @@
   animation: blink 0.75s step-end infinite;
 }
 
-/* 3D card tilts */
+/* 3D card tilts - Matte finish */
 .service-card-wrapper {
   transform: translateZ(0);
   will-change: transform;
@@ -112,26 +90,26 @@
 .service-card {
   transform-style: preserve-3d;
   transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.5s ease, border-color 0.3s ease;
-  background: rgba(30, 41, 59, 0.4);
+  background: rgba(30, 41, 59, 0.3);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .service-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: rgba(8, 145, 178, 0.3);
-  box-shadow: 0 20px 40px -15px rgba(8, 145, 178, 0.15);
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 /* Glassmorphism containers */
 .glass-container {
-  background: rgba(15, 23, 42, 0.65);
+  background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(16px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .glass-card {
-  background: rgba(30, 41, 59, 0.4);
+  background: rgba(30, 41, 59, 0.3);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -151,5 +129,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: rgba(255, 255, 255, 0.2);
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Code2, Sparkles, Terminal, Smartphone, Database } from "lucide-react"
+import { ArrowRight, Code2, Sparkles, Terminal } from "lucide-react"
 
 export default function Hero() {
   // Typewriter effect state
@@ -60,16 +60,10 @@ export default function Hero() {
       id="home"
       className="relative w-full min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden bg-slate-950"
     >
-      {/* Background Neon Glow Orbs */}
-      <div className="absolute inset-0 opacity-30 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-blue-600 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-600 rounded-full blur-[120px] animate-pulse delay-1000" />
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Side Info */}
         <div className="lg:col-span-7 text-left space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-400/25 text-cyan-400 font-semibold text-xs tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-white/10 text-slate-300 font-semibold text-xs tracking-wide uppercase">
             <Sparkles className="h-4 w-4" />
             Leading Digital Agency
           </div>
@@ -120,7 +114,7 @@ export default function Hero() {
                 <div className="w-3 h-3 rounded-full bg-emerald-500" />
               </div>
               <div className="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
-                <Terminal className="h-3 w-3 text-cyan-400" />
+                <Terminal className="h-3 w-3 text-slate-400" />
                 zimnext-solutions.ts
               </div>
               <div className="w-12 h-1" />
@@ -158,9 +152,9 @@ export default function Hero() {
             </div>
 
             {/* Floating Visual Pill Overlay inside Mock IDE */}
-            <div className="absolute -bottom-6 -right-6 bg-slate-950 border border-white/10 rounded-2xl p-4 shadow-2xl flex items-center gap-3 backdrop-blur-xl animate-bounce delay-700 max-w-[200px]">
-              <div className="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center border border-cyan-400/30">
-                <Code2 className="h-5 w-5 text-cyan-400" />
+            <div className="absolute -bottom-6 -right-6 bg-slate-950 border border-white/10 rounded-2xl p-4 shadow-2xl flex items-center gap-3 backdrop-blur-xl max-w-[200px]">
+              <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center border border-white/10">
+                <Code2 className="h-5 w-5 text-slate-300" />
               </div>
               <div>
                 <div className="text-[10px] uppercase font-bold text-slate-500">Platform</div>
